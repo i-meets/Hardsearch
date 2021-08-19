@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="infRelParcela" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="9219e21e-a578-4842-8087-1f8e50901df3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_dp"/>
+	<parameter name="codCop" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT nomePro, valorPro, dataPro FROM tbrealiza rel JOIN tbprocedi pro ON pro.codPro = rel.tbprocedi_codPro WHERE tbcoparti_codCop = '$P!{codCop}']]>
+	</queryString>
+	<field name="nomePro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomePro"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomePro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorPro" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="valorPro"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataPro" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dataPro"/>
+		<property name="com.jaspersoft.studio.field.label" value="dataPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbrealiza"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nomePro">
+		<groupExpression><![CDATA[$F{nomePro}]]></groupExpression>
+	</group>
+	<group name="valorPro">
+		<groupExpression><![CDATA[$F{valorPro}]]></groupExpression>
+	</group>
+	<group name="dataPro">
+		<groupExpression><![CDATA[$F{dataPro}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="0" width="190" height="19" uuid="a172d8ac-80d0-4e67-abc7-28f9a491f9f5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a316c478-1176-4221-a7a6-ff1f2a9631d7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nomePro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="0" width="60" height="19" uuid="b1a17430-0e2f-4762-ade5-96b90f3ca3ba">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="03a18ddb-989e-4657-a131-18c9bc16dbe6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["R$ "+$F{valorPro}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyy">
+				<reportElement x="400" y="0" width="60" height="19" uuid="f0ae6466-a4a3-4cfb-a2c5-885e64b16a02">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14fdd348-6ce5-4186-9e4c-9c2d8abcae65"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{dataPro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="130" height="19" uuid="dd521395-64d2-48ee-9445-d8e547dbb9a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a316c478-1176-4221-a7a6-ff1f2a9631d7"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição Procedimento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="80" height="19" uuid="ff03fee5-dded-444a-88b4-a34440ea3ce2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14fdd348-6ce5-4186-9e4c-9c2d8abcae65"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Realizado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="30" height="19" uuid="2aa0288e-7d11-4cd9-a419-a0add202befa">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14fdd348-6ce5-4186-9e4c-9c2d8abcae65"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

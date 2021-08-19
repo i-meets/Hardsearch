@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="infCompleRelParcelas" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2ec5b8e7-ee7c-452f-b781-7b33f9f5bb61">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="codCop" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT nomePro, dataPro, valorPro FROM tbrealiza rea JOIN tbprocedi pro ON pro.codPro = rea.tbprocedi_codPro WHERE tbcoparti_codCop = 5]]>
+	</queryString>
+	<field name="nomePro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nomePro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+	</field>
+	<field name="dataPro" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dataPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbrealiza"/>
+	</field>
+	<field name="valorPro" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="valorPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+	</field>
+	<group name="nomePro">
+		<groupExpression><![CDATA[$F{nomePro}]]></groupExpression>
+	</group>
+	<group name="dataPro">
+		<groupExpression><![CDATA[$F{dataPro}]]></groupExpression>
+	</group>
+	<group name="valorPro">
+		<groupExpression><![CDATA[$F{valorPro}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="50" y="0" width="220" height="16" uuid="f4fecdad-07bd-4c67-8be1-85a5e67afe4d"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomePro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="16" uuid="13215c27-8ab1-4a00-81f2-e18a1ba08047"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="300" y="0" width="60" height="16" uuid="b5a63f2e-ad14-4cd8-8fb2-b299361642ad"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataPro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="270" y="0" width="30" height="16" uuid="31798b5f-cb13-4c4d-a0aa-ee5676c5e184"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
+				<reportElement x="430" y="0" width="60" height="16" uuid="0f2f21ca-5f94-4886-bb5b-c47598e1d390"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valorPro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="400" y="0" width="30" height="16" uuid="db15124a-729a-48d9-b690-057d12382655"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

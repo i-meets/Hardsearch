@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="infRelGeracaoFolha" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="429f341c-da39-453b-a11d-8b171eba902b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="192.168.24.42-db_dp"/>
+	<parameter name="codFolha" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT codFolha, nrFuncionario, nomeFuncionario, tipoSalarioFuncionario, codEvento, descriEvento, tipoEvento, tipoProcessaEvento, conteudoFolha FROM tbrealizafolha reaf JOIN tbfuncionarios fun ON fun.codFuncionario = reaf.tbFolha_tbfuncionarios_codFuncionario JOIN tbeventos eve ON eve.codEvento = reaf.tbEventos_codEvento JOIN tbfolha fo ON fo.codFolha = reaf.tbFolha_codFolha WHERE tbFolha_codFolha = $P!{codFolha} ORDER BY codFuncionario]]>
+	</queryString>
+	<field name="codFolha" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="codFolha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbfolha"/>
+	</field>
+	<field name="nrFuncionario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="nrFuncionario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbfuncionarios"/>
+	</field>
+	<field name="nomeFuncionario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nomeFuncionario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbfuncionarios"/>
+	</field>
+	<field name="tipoSalarioFuncionario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipoSalarioFuncionario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbfuncionarios"/>
+	</field>
+	<field name="codEvento" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="codEvento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbeventos"/>
+	</field>
+	<field name="descriEvento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="descriEvento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbeventos"/>
+	</field>
+	<field name="tipoEvento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipoEvento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbeventos"/>
+	</field>
+	<field name="tipoProcessaEvento" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipoProcessaEvento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbeventos"/>
+	</field>
+	<field name="conteudoFolha" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="conteudoFolha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbrealizafolha"/>
+	</field>
+	<group name="codFolha">
+		<groupExpression><![CDATA[$F{codFolha}]]></groupExpression>
+	</group>
+	<group name="nrFuncionario">
+		<groupExpression><![CDATA[$F{nrFuncionario}]]></groupExpression>
+	</group>
+	<group name="nomeFuncionario">
+		<groupExpression><![CDATA[$F{nomeFuncionario}]]></groupExpression>
+	</group>
+	<group name="tipoSalarioFuncionario">
+		<groupExpression><![CDATA[$F{tipoSalarioFuncionario}]]></groupExpression>
+	</group>
+	<group name="codEvento">
+		<groupExpression><![CDATA[$F{codEvento}]]></groupExpression>
+	</group>
+	<group name="descriEvento">
+		<groupExpression><![CDATA[$F{descriEvento}]]></groupExpression>
+	</group>
+	<group name="tipoEvento">
+		<groupExpression><![CDATA[$F{tipoEvento}]]></groupExpression>
+	</group>
+	<group name="tipoProcessaEvento">
+		<groupExpression><![CDATA[$F{tipoProcessaEvento}]]></groupExpression>
+	</group>
+	<group name="conteudoFolha">
+		<groupExpression><![CDATA[$F{conteudoFolha}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="10" uuid="0af2f361-1ebc-406e-823f-40c52252f952">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nrFuncionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="120" height="10" uuid="d3912935-47e7-4fcd-8d09-26a122fab36f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeFuncionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="50" height="10" uuid="72491b68-5e71-45b6-8190-2b50cbc52a60">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoSalarioFuncionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="50" height="10" uuid="abd6fbda-2fc3-46ce-9908-757df1e0bd07">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codEvento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="10" uuid="e2139690-71b6-45cb-b9d0-1f7611533668">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoProcessaEvento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00#">
+				<reportElement mode="Opaque" x="480" y="0" width="45" height="10" backcolor="#FFFF00" uuid="9c890050-0065-4821-aa85-f79d1911500b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{conteudoFolha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="120" height="10" uuid="9d433d39-4102-4b1d-83d3-a4cb9e75a2ab">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descriEvento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

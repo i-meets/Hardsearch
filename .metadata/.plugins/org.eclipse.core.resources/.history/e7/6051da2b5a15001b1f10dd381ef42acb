@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relParcelas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f4586e6-4543-45cd-922d-e3a6adc58cd3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_dp"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tbparcela]]>
+	</queryString>
+	<field name="codParcela" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="codParcela"/>
+		<property name="com.jaspersoft.studio.field.label" value="codParcela"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorParcela" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="valorParcela"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorParcela"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataVencParcela" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dataVencParcela"/>
+		<property name="com.jaspersoft.studio.field.label" value="dataVencParcela"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="statusParcela" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="statusParcela"/>
+		<property name="com.jaspersoft.studio.field.label" value="statusParcela"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tbcoparti_codCop" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tbcoparti_codCop"/>
+		<property name="com.jaspersoft.studio.field.label" value="tbcoparti_codCop"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tbcoparti_tbfuncionarios_codFuncionario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tbcoparti_tbfuncionarios_codFuncionario"/>
+		<property name="com.jaspersoft.studio.field.label" value="tbcoparti_tbfuncionarios_codFuncionario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbparcela"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="codParcela">
+		<groupExpression><![CDATA[$F{codParcela}]]></groupExpression>
+	</group>
+	<group name="valorParcela">
+		<groupExpression><![CDATA[$F{valorParcela}]]></groupExpression>
+	</group>
+	<group name="dataVencParcela">
+		<groupExpression><![CDATA[$F{dataVencParcela}]]></groupExpression>
+	</group>
+	<group name="statusParcela">
+		<groupExpression><![CDATA[$F{statusParcela}]]></groupExpression>
+	</group>
+	<group name="tbcoparti_codCop">
+		<groupExpression><![CDATA[$F{tbcoparti_codCop}]]></groupExpression>
+	</group>
+	<group name="tbcoparti_tbfuncionarios_codFuncionario">
+		<groupExpression><![CDATA[$F{tbcoparti_tbfuncionarios_codFuncionario}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="infRelParcela" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9219e21e-a578-4842-8087-1f8e50901df3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="db_dp"/>
+	<parameter name="codCop" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT nomePro, valorPro, dataPro FROM tbrealiza rel JOIN tbprocedi pro ON pro.codPro = rel.tbprocedi_codPro WHERE tbcoparti_codCop = 8]]>
+	</queryString>
+	<field name="nomePro" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nomePro"/>
+		<property name="com.jaspersoft.studio.field.label" value="nomePro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorPro" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="valorPro"/>
+		<property name="com.jaspersoft.studio.field.label" value="valorPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbprocedi"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataPro" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="dataPro"/>
+		<property name="com.jaspersoft.studio.field.label" value="dataPro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbrealiza"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="nomePro">
+		<groupExpression><![CDATA[$F{nomePro}]]></groupExpression>
+	</group>
+	<group name="valorPro">
+		<groupExpression><![CDATA[$F{valorPro}]]></groupExpression>
+	</group>
+	<group name="dataPro">
+		<groupExpression><![CDATA[$F{dataPro}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
