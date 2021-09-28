@@ -597,7 +597,7 @@ public class FrRatingView extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        EdUser.setText("compras1@metalurgicaimac.com.br");
+        EdUser.setText("seuemail@seuservidor.com.br");
         jPanel2.add(EdUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 290, -1));
 
         jLabel4.setText("E-mail de envio:");
@@ -606,7 +606,7 @@ public class FrRatingView extends javax.swing.JInternalFrame {
         jLabel5.setText("Servidor de envio SMTP:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 65, -1, -1));
 
-        EdServSaida.setText("smtp.metalurgicaimac.com.br");
+        EdServSaida.setText("smtp.seuservidor.com.br");
         jPanel2.add(EdServSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 290, -1));
 
         jLabel6.setText("Porta:");
@@ -630,7 +630,7 @@ public class FrRatingView extends javax.swing.JInternalFrame {
         jLabel8.setText("Log envio:");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
-        EdSenhaMail.setText("com1#@18");
+        EdSenhaMail.setText("suasenha");
         jPanel2.add(EdSenhaMail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 290, -1));
 
         EdLimiteEnvios.setText("1");
